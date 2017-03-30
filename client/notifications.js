@@ -1,4 +1,4 @@
-var Q_NAME = window["CONSTANTS"]["Q_NAME"];
+var APP_NAME = window["CONSTANTS"]["APP_NAME"];
 
 // Title Notification
 var intervalId;
@@ -6,7 +6,7 @@ var timeoutId;
 Tracker.autorun(function(){
 
   clearInterval(intervalId);
-  setDocumentTitle(Q_NAME);
+  setDocumentTitle(APP_NAME);
 
   if (authorized.user()){
     var claimedTicket = Tickets.findOne({
@@ -20,13 +20,13 @@ Tracker.autorun(function(){
       notifyDesktop(message);
 
       intervalId = setInterval(function(){
-        setDocumentTitle("(\u2713) " + Q_NAME);
+        setDocumentTitle("(\u2713) " + APP_NAME);
         timeoutId = setTimeout(function(){
           setDocumentTitle(message);
         },1500)
       },3000);
     } else {
-      setDocumentTitle(Q_NAME);
+      setDocumentTitle(APP_NAME);
     }
   }
 
@@ -37,7 +37,7 @@ Tracker.autorun(function(){
     var activeCount = Tickets.find({
       status: 'OPEN'
     }).count();
-    setDocumentTitle("(" + activeCount + ") " + Q_NAME);
+    setDocumentTitle("(" + activeCount + ") " + APP_NAME);
   }
 });
 
@@ -60,7 +60,7 @@ Tracker.autorun(function(){
 function notifyDesktop(body){
   if (window["Notification"]){
     if (Notification.permission == "granted"){
-      var notification = new Notification(Q_NAME, {
+      var notification = new Notification(APP_NAME, {
         icon: CONSTANTS.NOTIFICATION_ICON,
         body: body
       });
