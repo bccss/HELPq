@@ -8,10 +8,10 @@
 //------------------------------
 
 // Primary color of your brand (Used for primary buttons, glows, etc.)
-$brand-primary: #137DC3;
+$brand-primary: #571619;
 
 // Secondary color of your brand (used for secondary buttons)
-$brand-secondary: #FFBF0A;
+$brand-secondary: #fed136;
 
 // Success Buttons
 $brand-success: rgb(46, 204, 113);
@@ -31,6 +31,9 @@ $facebook-blue: #3b5998;
 
 // Github Gray
 $github-gray: #e4e4e4;
+
+// Google Red
+$google-green: #34a853;
 
 // ===============================================================================
 
@@ -78,11 +81,11 @@ $github-gray: #e4e4e4;
   // background: $brand-primary;
 
   // Single background image covering the entire page
-  // background: url(/assets/images/background.jpg) no-repeat center center;
-  // background-size: cover;
+  background: url(/assets/images/background.jpg) no-repeat center center;
+  background-size: cover;
 
   // Background image that repeats
-  background: url(/assets/images/geometry2.png) repeat;
+  // background: url(/assets/images/geometry2.png) repeat;
 }
 
 
@@ -96,10 +99,10 @@ $github-gray: #e4e4e4;
   // background-size: cover;
 
   // Basic white on brand color:
-  // background: $brand-primary;
+  background: $brand-primary;
 
   // Repeated Background:
-  background: url(/assets/images/geometry2.png) repeat;
+  // background: url(/assets/images/geometry2.png) repeat;
 }
 
 // Footer, which appears on each page.
