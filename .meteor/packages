@@ -6,7 +6,7 @@
 accounts-github
 service-configuration
 iron:router
-
+accounts-google
 accounts-facebook
 momentjs:moment
 reactive-var
